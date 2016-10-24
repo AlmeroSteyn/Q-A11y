@@ -1,0 +1,33 @@
+Perceived difficulty of a11y
+	-> And now you gotta support WCAG
+	-> But my HTML works
+Reasons for a11y
+	-> Some examples of how disabled experience websites
+	-> Real people
+	-> Also internal company people
+	-> Catagories of disabilities
+	-> A11y for your old day
+	-> Non disabled benefits
+Lots of work when
+	-> Retrofitting
+	-> Hey that looks so nice!
+	-> One person vs the team
+Example of quick wins and why
+    -> Symantic HTML
+	-> Keyboard focus outline
+	-> Labelling
+	-> Buttons vs div click
+	-> Link hrefs
+	-> Buttons vs links
+	-> Image alt
+	-> Contrast
+A11y tools
+	-> aXe
+	-> Colour contrast
+	-> No Coffee
+	-> WAVE
+	-> Screen readers
+Roll of designers
+	-> Include a11y in designs and prototypes
+	-> Inclusive design vs good looking design
+A11y is for everyone!
