@@ -1323,3 +1323,12 @@ body {
 
 .zoomed .reveal .roll span:after {
   visibility: hidden; }
+
+
+/*********************************************
+ * OVERRIDES
+ *********************************************/
+
+input {
+    border-width: 2px; border-style: solid; border-color: black
+}
