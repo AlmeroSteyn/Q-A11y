@@ -111,26 +111,26 @@
         </section>
         <section>
             <section><h2>"But I feel disabled testing accessibility!"</h2></section>
-            <section><h2>aXe your a11y issues!</h2></section>
-            <section><h2>WAVE your a11y issues goodbye.</h2></section>
+            <section><h2>aXe your accessibility issues!</h2></section>
+            <section><h2>WAVE your accessibility issues goodbye.</h2></section>
             <section><h2>Visualising contrast.</h2></section>
             <section><h2>Simulate visual disabilities.</h2></section>
             <section><h2>The screen reader.</h2></section>
         </section>
         <section>
-            <section><h2>Designers: The rise or fall of a11y.</h2></section>
-            <section><h2>It's never to early to think about a11y.</h2></section>
+            <section><h2>Designers: The rise or fall of accessibility.</h2></section>
+            <section><h2>It's never to early to think about accessibility.</h2></section>
             <section><h2>Inclusive design vs. good looking design.</h2></section>
         </section>
         <section><h2>Accessibility is for veryone!</h2></section>
         <section>
-            <video class="stretch" data-src="videos/2016-10-24%2018-17-08.mp4" type="video/mp4">
+            <video controls class="stretch v8h0" data-src="videos/test.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
         </section>
         <section>Slide 2
-            <video width="800" height="600">
-                <source data-src="videos/2016-10-24%2018-17-08.mp4" type="video/mp4">
+            <video controls class="stretch v7h0" width="800" height="600">
+                <source data-src="videos/test.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
         </section>
@@ -161,17 +161,23 @@
     Reveal.configure({
         keyboard: {
             13: 'next', // go to the next slide when the ENTER key is pressed
-            27: function () {
-            }, // do something custom when ESC is pressed
-            32: function () {
-//						console.log(Reveal.getState());
-//						var videos = document.querySelectorAll('video');
-//						console.log(videos);
-//						console.log('test');
-                var video = document.querySelectorAll('video')[Reveal.getState().indexh];
-                if (video.paused == true) video.play();
-                else video.pause();
-            }
+//            27: function () {
+//                var state = Reveal.getState();
+//                var vidClass = 'v' + state.indexh.toString() + 'h' + state.indexv.toString();
+//                var video = document.querySelector('video.' + vidClass);
+//                video.pause();
+//                video.currentTime = 0;
+//                video.load();
+////                if (video.paused == true) video.play();
+////                else video.pause();
+//            }, // do something custom when ESC is pressed
+//            32: function () {
+//                var state = Reveal.getState();
+//                var vidClass = 'v' + state.indexh.toString() + 'h' + state.indexv.toString();
+//                var video = document.querySelector('video.' + vidClass);
+//                if (video.paused == true) video.play();
+//                else video.pause();
+//            }
         }
     });
 </script>
