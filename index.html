@@ -120,8 +120,13 @@
         <section>
             <section>
                 <h2>"Put your money where your mouth is!"</h2>
+                <img src="images/faildetail.png" class="stretch"/>
 
-
+            </section>
+            <section>
+                <video controls class="stretch v3h1" data-src="videos/FailDetail1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
             </section>
             <section><h2>I speak HTML!</h2></section>
             <section><h2>Don't lose focus.</h2></section>
@@ -184,23 +189,25 @@
     Reveal.configure({
         keyboard: {
             13: 'next', // go to the next slide when the ENTER key is pressed
-//            27: function () {
-//                var state = Reveal.getState();
-//                var vidClass = 'v' + state.indexh.toString() + 'h' + state.indexv.toString();
-//                var video = document.querySelector('video.' + vidClass);
-//                video.pause();
-//                video.currentTime = 0;
-//                video.load();
-////                if (video.paused == true) video.play();
-////                else video.pause();
-//            }, // do something custom when ESC is pressed
-//            32: function () {
-//                var state = Reveal.getState();
-//                var vidClass = 'v' + state.indexh.toString() + 'h' + state.indexv.toString();
-//                var video = document.querySelector('video.' + vidClass);
+            27: function () {
+                var state = Reveal.getState();
+                var vidClass = 'v' + state.indexh.toString() + 'h' + state.indexv.toString();
+                var video = document.querySelector('video.' + vidClass);
+                video.pause();
+                video.currentTime = 0;
+                video.load();
 //                if (video.paused == true) video.play();
 //                else video.pause();
-//            }
+            }, // do something custom when ESC is pressed
+            32: function () {
+                var state = Reveal.getState();
+                console.log(state.indexh);
+                console.log(state.indexv);
+                var vidClass = 'v' + state.indexh.toString() + 'h' + state.indexv.toString();
+                var video = document.querySelector('video.' + vidClass);
+                if (video.paused == true) video.play();
+                else video.pause();
+            }
         }
     });
 </script>
