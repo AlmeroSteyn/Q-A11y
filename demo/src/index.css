@@ -12,6 +12,10 @@ body {
   margin-top: 20px;
 }
 
+label {
+  width: 100%;
+}
+
 .no-focus input.form-control:focus {
   color: transparent;
   text-shadow: 0 0 0 gray;
