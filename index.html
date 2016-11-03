@@ -106,7 +106,7 @@
             <section>
                 <h2>"Hey that looks so nice!"</h2>
                 <img src="images/chosen.png" class="stretch"/>
-                <p>But I can't operate it at all with a keyboard!  ¯\_(ツ)_/¯</p>
+                <p>But I can't operate it at all with a keyboard! ¯\_(ツ)_/¯</p>
             </section>
             <section>
                 <h2>No man is an island.</h2>
@@ -143,8 +143,34 @@
                 </code></pre>
                 <img src="images/focus.png" class="stretch"/>
             </section>
-            <section><h2>Every time you neglect to label a control a fairy drops down dead.</h2></section>
-            <section><h2>If it walks like a ducks and quacks like a duck it must be... urm... a button?</h2></section>
+            <section>
+                <h2>Every time you neglect to label a control a fairy drops down dead.</h2>
+                <pre><code>
+                    //Implicit labelling
+
+                    <label>Name:
+                        <input type="text"/>
+                    </label>
+
+                    //Explicit labelling
+                    <label for="nameInput">Name:</label>
+                    <input id="nameInput" type="text"/>
+
+                    //ARIA labelling
+                    <input type="text" aria-label="Name"/>
+
+                </code></pre>
+            </section>
+            <section>
+                <h2>If it walks like a ducks and quacks like a duck it must be... urm... a button?</h2>
+                <pre><code>
+//All the power of JavaScript and you make a DIV clickable?
+<div className="btn btn-primary" onClick={...}>Press Me</div>
+
+//How about just...
+<button className="btn btn-primary" onClick={...}>Press Me</button>
+                </code></pre>
+            </section>
             <section><h2>Your HTML is as strong as its weakest link.</h2></section>
             <section><h2>Button it! Link it!</h2></section>
             <section><h2>Don't leave people out of the picture.</h2></section>
@@ -165,17 +191,6 @@
             <section><h2>Inclusive design vs. good looking design.</h2></section>
         </section>
         <section><h2>Accessibility is for veryone!</h2></section>
-        <section>
-            <video controls class="stretch v8h0" data-src="videos/test.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </section>
-        <section>Slide 2
-            <video controls class="stretch v7h0" width="800" height="600">
-                <source data-src="videos/test.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </section>
     </div>
 </div>
 
