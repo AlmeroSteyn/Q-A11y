@@ -147,7 +147,6 @@
                 <h2>Every time you neglect to label a control a fairy drops down dead.</h2>
                 <pre><code>
                     //Implicit labelling
-
                     <label>Name:
                         <input type="text"/>
                     </label>
@@ -162,7 +161,7 @@
                 </code></pre>
             </section>
             <section>
-                <h2>If it walks like a ducks and quacks like a duck it must be... urm... a button?</h2>
+                <h2>If it walks like a duck and quacks like a duck it must be... urm... a button?</h2>
                 <pre><code>
 //All the power of JavaScript and you make a DIV clickable?
 <div className="btn btn-primary" onClick={...}>Press Me</div>
@@ -171,8 +170,28 @@
 <button className="btn btn-primary" onClick={...}>Press Me</button>
                 </code></pre>
             </section>
-            <section><h2>Your HTML is as strong as its weakest link.</h2></section>
-            <section><h2>Button it! Link it!</h2></section>
+            <section>
+                <h2>Your HTML is as strong as its weakest link.</h2>
+                <pre><code>
+//Anchors are for navigation!
+<a onClick={...}>Go to the company details.</a>
+<a href="#" onClick={...}>Go to the company details.</a>
+
+//Aaaaah that's better...
+<a href="www.qdelft.nl">Go to the company details.</a>
+                </code></pre>
+            </section>
+            <section>
+                <h2>Button it! Link it!</h2>
+                <pre><code>
+//Buttons are for actions
+<button onClick={...}>Save changes.</button>
+
+//Anchors are for navigation!
+<a href="www.qdelft.nl">Go to the company details.</a>
+                </code></pre>
+                <img src="images/buttonlink.png"/>
+            </section>
             <section><h2>Don't leave people out of the picture.</h2></section>
             <section><h2>Hey man, that's super psychedelic!</h2></section>
             <section><h2>I speak HTML!</h2></section>
