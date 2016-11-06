@@ -151,27 +151,63 @@
             <section>
                 <h2>What if I told you that it's only perceived to be hard?</h2>
                 <img src="images/perception.png" class="stretch"/>
+                <aside class="notes">
+                    <ul>
+                        <li>Knowing how to implement a11y makes doing it easy.</li>
+                        <li>The perceived difficulty comes from the unknown.</li>
+                    </ul>
+                </aside>
             </section>
             <section>
                 <h2>Who wouldn't be able to use this input screen?</h2>
                 <img src="images/faildetail.png" class="stretch"/>
+                <aside class="notes">
+                    <ul>
+                        <li>Mention that it is a simple visually clear form.</li>
+                        <li>Anyone should be able to use it, right?</li>
+                    </ul>
+                </aside>
             </section>
             <section>
                 <h2>Let's try it with a screen reader...</h2>
                 <video controls class="stretch v2h2" data-src="videos/FailDetail1.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
+                <aside class="notes">
+                    <ul>
+                        <li>We are using NVDA in Firefox with reading speed reduced.</li>
+                        <li>Let's see how a blind user would experience our form.</li>
+                    </ul>
+                </aside>
             </section>
             <section>
                 <img data-src="images/OMG.gif" class="stretch"/>
+                <aside class="notes">
+                    <ul>
+                        <li>Do I need to say more?</li>
+                    </ul>
+                </aside>
             </section>
             <section>
                 <h2>It's a dumpster fire!</h2>
                 <img src="images/dumpster.gif" class="stretch"/>
+                <aside class="notes">
+                    <ul>
+                        <li>For a blind person this form is a disaster and unusable!</li>
+                    </ul>
+                </aside>
             </section>
             <section>
                 <h2>Let's recap!</h2>
                 <img src="images/faildetailvirt.png" class="stretch"/>
+                <aside class="notes">
+                    <ul>
+                        <li>Let's try and visually represent what a blind person sees here.</li>
+                        <li>It is a form without labels and no indications.</li>
+                        <li>In fact the entire button is invisible.</li>
+                        <li>The user has no idea what is required or how to proceed.</li>
+                    </ul>
+                </aside>
             </section>
             <section>
                 <h2>Don't lose focus.</h2>
@@ -183,6 +219,12 @@
                     }
                 </code></pre>
                 <img src="images/focus.png" class="stretch"/>
+                <aside class="notes">
+                    <ul>
+                        <li>Removing the focus outline completely makes a site inaccessible.</li>
+                        <li>Never use the outline:0 style unless you implement your own focus style like Bootstrap</li>
+                    </ul>
+                </aside>
             </section>
             <section>
                 <h2>Every time you neglect to label a control a fairy drops down dead.</h2>
@@ -200,6 +242,14 @@
 <input type="text" aria-label="Name"/>
 
                 </code></pre>
+                <aside class="notes">
+                    <ul>
+                        <li>Every form control needs a label.</li>
+                        <li>We can use implicit labelling or explicit labelling.</li>
+                        <li>For cases where the label is implied visually, we can use ARIA to still label for AT.</li>
+                        <li>By properly labelling controls you can also select them by clicking the labels!</li>
+                    </ul>
+                </aside>
             </section>
             <section>
                 <h2>If it walks like a duck and quacks like a duck it must be... urm... a button?</h2>
@@ -210,6 +260,14 @@
 //How about just...
 <button class="btn btn-primary" onClick={...}>Press Me</button>
                 </code></pre>
+                <aside class="notes">
+                    <ul>
+                        <li>Use native HTML elements when possible.</li>
+                        <li>Every native HTML element is accessible for its role.</li>
+                        <li>Mention a button with enter and space for activation.</li>
+                        <li>One of the biggest secrets of a11y is using native HTML elements.</li>
+                    </ul>
+                </aside>
             </section>
             <section>
                 <h2>Your HTML is as strong as its weakest link.</h2>
@@ -221,6 +279,13 @@
 //Aaaaah that's better...
 <a href="www.qdelft.nl">Go to the company details.</a>
                 </code></pre>
+                <aside class="notes">
+                    <ul>
+                        <li>An anchor is invalid without a proper href.</li>
+                        <li>Omitting the href completely will render the anchor unclickable!</li>
+                        <li>Let anchors navigate!</li>
+                    </ul>
+                </aside>
             </section>
             <section>
                 <h2>Button it! Link it!</h2>
@@ -232,47 +297,112 @@
 <a href="www.qdelft.nl">Go to the company details.</a>
                 </code></pre>
                 <img src="images/buttonlink.png"/>
+                <aside class="notes">
+                    <ul>
+                        <li>Anchors are built for browser navigation.</li>
+                        <li>Buttons are there for actions.</li>
+                        <li>Mixing leads to cofusion.</li>
+                        <li>Explain how visual conflicting styles can also lead to confusion.</li>
+                    </ul>
+                </aside>
             </section>
             <section>
                 <h2>Don't leave people out of the picture.</h2>
                 <pre><code>
 <img src="somepic4327628376465784365.png" alt="Image of Albert Einstein"/>
                 </code></pre>
+                <aside class="notes">
+                    <ul>
+                        <li>Images need to be described for non visual users.</li>
+                        <li>Buttons are there for actions.</li>
+                        <li>Mixing leads to cofusion.</li>
+                        <li>Explain how visual conflicting styles can also lead to confusion.</li>
+                    </ul>
+                </aside>
             </section>
             <section>
                 <h2>Let's apply some of the new things we learnt.</h2>
                 <video controls class="stretch v2h12" data-src="videos/PassDetail.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
+                <aside class="notes">
+                    <ul>
+                        <li>Mention how we will now fix the previous form and retry with a screen reader.</li>
+                    </ul>
+                </aside>
             </section>
             <section>
                 <h2>Now we speak HTML!</h2>
                 <img src="images/speak.png" class="stretch"/>
+                <aside class="notes">
+                    <ul>
+                        <li>Re-iterate that writing proper HTML is very NB.</li>
+                        <li>If you want to be a web dev you need to know HTML and HTML symantics.</li>
+                    </ul>
+                </aside>
             </section>
             <section>
                 <h2>And ARIA is your second dialect...</h2>
                 <a href="https://www.w3.org/WAI/intro/aria">https://www.w3.org/WAI/intro/aria</a>
+                <aside class="notes">
+                    <ul>
+                        <li>Mention what ARIA is.</li>
+                        <li>Mention when you use it.</li>
+                    </ul>
+                </aside>
             </section>
             <section>
                 <h2>One more thing... Pokemon NO!</h2>
                 <img src="images/contrast.png" class="stretch"/>
+                <aside class="notes">
+                    <ul>
+                        <li>Describe pokemon contrast failure.</li>
+                        <li>Say it is but one of many cases where some users find it hard to impossible to join in.</li>
+                    </ul>
+                </aside>
             </section>
         </section>
         <section>
             <section>
                 <p><i>Seeing it once is better than being told 100 times.</i> - Chinese proverb</p>
+                <aside class="notes">
+                    <ul>
+                        <li>We will now look at tooling and techniques to help you test a11y.</li>
+                        <li>It is impossible to do something if you are unable to detect the effect of it. Same with
+                            a11y..
+                        </li>
+                    </ul>
+                </aside>
             </section>
             <section>
                 <h2>Plug out your mouse!</h2>
                 <img src="images/nomouse.png" class="stretch"/>
+                <aside class="notes">
+                    <ul>
+                        <li>One of the most important tests. Keyboard nav only.</li>
+                        <li>Explain keyboard navigation.</li>
+                    </ul>
+                </aside>
             </section>
             <section>
                 <h2>Chrome accessibility inspector.</h2>
                 <img src="images/ChromeInspector.png" class="stretch"/>
+                <aside class="notes">
+                    <ul>
+                        <li>Available as developer tool experiment.</li>
+                        <li>The steps to activate it is online and you use the chrome flags.</li>
+                        <li>See how it displays what the screen reader will say.</li>
+                    </ul>
+                </aside>
             </section>
             <section>
                 <h2>Safari accessibility inspector.</h2>
                 <img src="images/safari-inspector.png" class="stretch"/>
+                <aside class="notes">
+                    <ul>
+                        <li>Similar functionality inside Safari on Mac.</li>
+                    </ul>
+                </aside>
             </section>
             <section>
                 <h2>aXe your accessibility issues! </h2>
@@ -280,6 +410,13 @@
                 <video controls class="stretch v3h4" data-src="videos/axe.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
+                <aside class="notes">
+                    <ul>
+                        <li>Say aXe is from Deque Systems.</li>
+                        <li>Mention how it works.</li>
+                        <li>Mention aXe-core and how that can be used to automate these tests.</li>
+                    </ul>
+                </aside>
             </section>
             <section>
                 <h2>WAVE away your issues.</h2>
@@ -287,6 +424,13 @@
                 <video controls class="stretch v3h5" data-src="videos/wave.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
+                <aside class="notes">
+                    <ul>
+                        <li>Explain how WAVE works.</li>
+                        <li>Mention it only works in Chrome.</li>
+                        <li>Warn about contrast bug.</li>
+                    </ul>
+                </aside>
             </section>
             <section>
                 <h2>Visualising contrast.</h2>
@@ -294,46 +438,99 @@
                 <video controls class="stretch v3h6" data-src="videos/cca.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
+                <aside class="notes">
+                    <ul>
+                        <li>Show where the contrast fails.</li>
+                    </ul>
+                </aside>
             </section>
             <section><h2>Simulate visual disabilities.</h2>
                 <p>NoCoffee Vision Simulator</p>
                 <video controls class="stretch v3h7" data-src="videos/NoCoffee.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
+                <aside class="notes">
+                    <ul>
+                        <li>Explain how a tool like this can be used to simulate visual issues.</li>
+                        <li>Mention glare as something impacting everyone.</li>
+                    </ul>
+                </aside>
             </section>
             <section>
                 <h2>The screen reader.</h2>
                 <img src="images/screenbrowser.png" class="stretch"/>
+                <aside class="notes">
+                    <ul>
+                        <li>Explain that combinations are important.</li>
+                        <li>Webaim and a11yproject has guides on how to use all the screen readers.</li>
+                    </ul>
+                </aside>
             </section>
         </section>
         <section>
             <section>
                 <h2>Do it right from the start.</h2>
                 <img src="images/alllove.png" class="stretch"/>
+                <aside class="notes">
+                    <ul>
+                        <li>Talk about how a11y is little extra work if it is thouight about from the start.</li>
+                        <li>This is where a11y can become a lot of work later if everyone does not care about it.</li>
+                    </ul>
+                </aside>
             </section>
             <section>
                 <h2>No man is an island.</h2>
                 <img src="images/noisland.png" class="stretch"/>
+                <aside class="notes">
+                    <ul>
+                        <li>Re-iterate the importance of everyone caring about a11y.</li>
+                        <li>Re-iterate that a11y is only little work if it is important to everyone and from the start.</li>
+                    </ul>
+                </aside>
             </section>
             <section>
                 <h2>Inclusive design vs. good looking design.</h2>
                 <img src="images/chosen.png" class="stretch"/>
                 <p>But I can't operate it at all with a keyboard! ¯\_(ツ)_/¯</p>
+                <aside class="notes">
+                    <ul>
+                        <li>Don't just design for sighties. Design for function.</li>
+                        <li>No matter how good something looks to you, there may be someone who gets completely blocked from using it.</li>
+                    </ul>
+                </aside>
             </section>
             <section>
                 <h2>Remember those internal websites!</h2>
                 <p>The people in your company are... PEOPLE!</p>
+                <aside class="notes">
+                    <ul>
+                        <li>Mention how we already have people with disabilities in our workplaces.</li>
+                        <li>Mention that we are closing doors from desperate unemployed people by negating this.</li>
+                    </ul>
+                </aside>
             </section>
             <section>
                 <h2>Helpful links</h2>
                 <a href="http://a11yproject.com/">http://a11yproject.com/</a><br>
                 <a href="http://webaim.org/">http://webaim.org/</a><br>
                 <a href="https://www.w3.org/TR/wai-aria-practices-1.1/">https://www.w3.org/TR/wai-aria-practices-1.1/</a>
+                <aside class="notes">
+                    <ul>
+                        <li>Explain what the links above are about.</li>
+                    </ul>
+                </aside>
             </section>
         </section>
         <section>
             <h2>Accessibility is easy!</h2>
             <img src="images/a11yeasy.png" class="stretch"/>
+            <aside class="notes">
+                <ul>
+                    <li>Stand still by how a11y can be very easy.</li>
+                    <li>Mention the importance again vs the little extra time we need to skill up and build a11y websites.</li>
+                    <li>Mention how we are now ready to build the inclusive websites of the future.</li>
+                </ul>
+            </aside>
         </section>
     </div>
 </div>
