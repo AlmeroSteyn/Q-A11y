@@ -184,7 +184,7 @@
                 </divs>
 
 
-                <pre><code data-trim>
+                <pre><code class="html" data-trim>
 <divs>
 <span>Enter text here</span></span>
     <input>
@@ -270,8 +270,8 @@
             <section data-background-image="./images/QLogoQOnlyPadded.png" data-background-size="100px"
                      data-background-position="bottom left">
                 <h2>Don't lose focus.</h2>
-                <pre><code>
-                    //The cardinal sin
+                <pre><code class="css">
+                    /*The cardinal sin*/
 
                     :focus {
                     outline: 0;
@@ -288,17 +288,17 @@
             <section data-background-image="./images/QLogoQOnlyPadded.png" data-background-size="100px"
                      data-background-position="bottom left">
                 <h2>Every time you neglect to label a control a fairy drops down dead.</h2>
-                <pre><code>
-//Implicit labelling
+                <pre><code class="html">
+<!--Implicit labelling-->
 <label>Name:
    <input type="text"/>
 </label>
 
-//Explicit labelling
+<!--Explicit labelling-->
 <label for="nameInput">Name:</label>
 <input id="nameInput" type="text"/>
 
-//ARIA labelling
+<!--ARIA labelling-->
 <input type="text" aria-label="Name"/>
 
                 </code></pre>
@@ -314,11 +314,11 @@
             <section data-background-image="./images/QLogoQOnlyPadded.png" data-background-size="100px"
                      data-background-position="bottom left">
                 <h2>If it walks like a duck and quacks like a duck it must be... urm... a button?</h2>
-                <pre><code>
-//All the power of JavaScript and you make a DIV clickable?
+                <pre><code class="html">
+<!--All the power of JavaScript and you make a DIV clickable?-->
 <div class="btn btn-primary" onClick={...}>Press Me</div>
 
-//How about just...
+<!--How about just...-->
 <button class="btn btn-primary" onClick={...}>Press Me</button>
                 </code></pre>
                 <aside class="notes">
@@ -333,13 +333,13 @@
             <section data-background-image="./images/QLogoQOnlyPadded.png" data-background-size="100px"
                      data-background-position="bottom left">
                 <h2>Your HTML is as strong as its weakest link.</h2>
-                <pre><code>
-//Anchors are for navigation!
-<a onClick={...}>Go to the company details.</a>
-<a href="#" onClick={...}>Go to the company details.</a>
+                <pre><code class="html">
+<!--Anchors are for navigation!-->
+<a onClick={...}>Go to the company page.</a>
+<a href="#" onClick={...}>Go to the company page.</a>
 
-//Aaaaah that's better...
-<a href="www.qdelft.nl">Go to the company details.</a>
+<!--Aaaaah that's better...-->
+<a href="www.qdelft.nl">Go to the company page.</a>
                 </code></pre>
                 <aside class="notes">
                     <ul>
@@ -352,11 +352,11 @@
             <section data-background-image="./images/QLogoQOnlyPadded.png" data-background-size="100px"
                      data-background-position="bottom left">
                 <h2>Button it! Link it!</h2>
-                <pre><code>
-//Buttons are for actions
+                <pre><code class="html">
+<!--Buttons are for actions-->
 <button onClick={...}>Save changes.</button>
 
-//Anchors are for navigation!
+<!--Anchors are for navigation!-->
 <a href="www.qdelft.nl">Go to the company details.</a>
                 </code></pre>
                 <img src="images/buttonlink.png"/>
@@ -372,7 +372,7 @@
             <section data-background-image="./images/QLogoQOnlyPadded.png" data-background-size="100px"
                      data-background-position="bottom left">
                 <h2>Don't leave people out of the picture.</h2>
-                <pre><code>
+                <pre><code class="html">
 <img src="somepic4327628465784365.png" alt="Image of Albert Einstein"/>
                 </code></pre>
                 <aside class="notes">
