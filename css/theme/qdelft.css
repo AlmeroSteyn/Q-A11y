@@ -304,10 +304,18 @@ body {
     width: 78%; }
 
 .reveal section .q-col-50 {
-  width: 50%; }
+  width: 50%;
+  text-align: left; }
+  .reveal section .q-col-50 ul {
+    margin: 0; }
+  .reveal section .q-col-50 li {
+    text-align: left; }
 
 .reveal section .q-col-50-right {
-  left: 50%; }
+  left: 50%;
+  text-align: right; }
+  .reveal section .q-col-50-right li {
+    text-align: right; }
 
 .reveal section .q-col-33 {
   width: 33.33%; }
